@@ -1,71 +1,69 @@
-"use client";
-
 export default function Features() {
   const features = [
     {
-      title: "Performance",
-      description: "Checkout otimizado para máxima velocidade e conversão.",
-      icon: "🚀",
-      gradient: "from-yellow-400 to-yellow-600"
+      title: "Controle de Gastos",
+      description: "Acompanhe todos os seus gastos em tempo real com categorização automática.",
+      icon: "💰"
     },
     {
-      title: "Zero Taxas",
-      description: "Transparência total. Sem taxas escondidas.",
-      icon: "💰",
-      gradient: "from-yellow-500 to-orange-500"
+      title: "Metas Financeiras",
+      description: "Defina e acompanhe suas metas de economia e investimento.",
+      icon: "🎯"
     },
     {
-      title: "Controle",
-      description: "Customização completa. Suas regras, sem limites.",
-      icon: "⚙️",
-      gradient: "from-yellow-300 to-yellow-500"
+      title: "Relatórios Visuais",
+      description: "Gráficos e relatórios claros sobre sua situação financeira.",
+      icon: "📊"
+    },
+    {
+      title: "Lembretes Inteligentes",
+      description: "Nunca mais esqueça de pagar uma conta importante.",
+      icon: "⏰"
+    },
+    {
+      title: "Análise de Padrões",
+      description: "Identifique padrões nos seus gastos e otimize seu orçamento.",
+      icon: "📈"
+    },
+    {
+      title: "Sincronização Multi-dispositivo",
+      description: "Acesse seus dados em qualquer dispositivo, a qualquer hora.",
+      icon: "📱"
     }
   ];
 
   return (
-    <section id="recursos" className="py-24 md:py-32 bg-black relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-400/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-yellow-400/3 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="container mx-auto px-6 md:px-8 relative z-10">
-        <div className="text-center mb-20">
-          <div className="inline-block mb-6">
-            <span className="px-6 py-3 bg-yellow-400/10 text-yellow-400 rounded-full text-sm font-bold heading-modern border border-yellow-400/20">
-              PRINCIPAIS RECURSOS
-            </span>
+    <section id="recursos" className="py-20 md:py-32 bg-black">
+      <div className="container mx-auto px-6 md:px-8">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-4 py-2 bg-white/10 rounded-full text-sm font-medium text-white mb-6">
+            <span className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>
+            RECURSOS PRINCIPAIS
           </div>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 heading-modern tracking-tight">
-            Principais <span className="gradient-text">Recursos</span>
+          
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6">
+            Tudo que você precisa para
+            <span className="relative inline-block mx-3">
+              <span className="relative z-10 text-white">organizar</span>
+              <div className="absolute bottom-2 left-0 w-full h-4 bg-yellow-400/30 -skew-x-12"></div>
+            </span>
+            suas finanças
           </h2>
-          <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed text-modern">
-            Descubra as funcionalidades que fazem do DS Checkout a escolha perfeita para seu negócio.
+          
+          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+            Ferramentas poderosas e simples para você ter controle total sobre seu dinheiro.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className="group card-modern p-8 hover:scale-105 transition-all duration-500 relative overflow-hidden"
+              className="group p-8 bg-white/5 rounded-3xl hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-yellow-400/50 hover:scale-105"
             >
-              {/* Hover effect background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
-              <div className="relative z-10">
-                <div className="mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    {feature.icon}
-                  </div>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white heading-modern">{feature.title}</h3>
-                <p className="text-white/70 leading-relaxed text-lg text-modern">{feature.description}</p>
-              </div>
-
-              {/* Decorative border */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="text-4xl mb-6">{feature.icon}</div>
+              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+              <p className="text-white/70 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

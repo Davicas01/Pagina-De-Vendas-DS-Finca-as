@@ -1,35 +1,77 @@
 import type { Metadata } from 'next'
 import { Inter, Poppins, Montserrat } from 'next/font/google'
 import '@/styles/globals.css'
-import { Providers } from './providers'
-import { generateStructuredData } from '@/lib/seo'
+import '@/styles/components.css'
 
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-inter',
   display: 'swap',
+  variable: '--font-inter',
 })
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-poppins',
   display: 'swap',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-poppins',
 })
 
 const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-montserrat',
   display: 'swap',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-montserrat',
 })
 
 export const metadata: Metadata = {
-  title: 'DS CHECKOUT | Checkout próprio para seu negócio',
-  description: 'Checkout próprio. Zero taxas escondidas. Controle total. Transforme a forma como você vende online.',
-  keywords: 'checkout, vendas online, ecommerce, pagamentos, zero taxas',
-  metadataBase: new URL('https://dscheckout.com'),
+  title: 'DS Finanças - Transforme sua vida financeira',
+  description: 'Plataforma completa de educação e gestão financeira com IA integrada',
+  keywords: 'finanças, controle financeiro, educação financeira, IA, gestão de dinheiro',
+  authors: [{ name: 'DSYNCO' }],
+  creator: 'DSYNCO',
+  publisher: 'DSYNCO',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://dsfinancas.com'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'DS Finanças - Transforme sua vida financeira',
+    description: 'Plataforma completa de educação e gestão financeira com IA integrada',
+    url: 'https://dsfinancas.com',
+    siteName: 'DS Finanças',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'DS Finanças - Controle financeiro inteligente',
+      },
+    ],
+    locale: 'pt_BR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'DS Finanças - Transforme sua vida financeira',
+    description: 'Plataforma completa de educação e gestão financeira com IA integrada',
+    images: ['/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 export default function RootLayout({
@@ -38,20 +80,21 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR" className="scroll-smooth">
+    <html 
+      lang="pt-BR" 
+      className={`${inter.variable} ${poppins.variable} ${montserrat.variable}`}
+    >
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: generateStructuredData(),
-          }}
-        />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="color-scheme" content="dark" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
       </head>
-      <body className={`min-h-screen bg-black text-white antialiased ${inter.variable} ${poppins.variable} ${montserrat.variable}`}>
-        <Providers>
+      <body className="bg-black text-white antialiased font-sans min-h-screen">
+        <div id="root">
           {children}
-        </Providers>
+        </div>
       </body>
     </html>
   )

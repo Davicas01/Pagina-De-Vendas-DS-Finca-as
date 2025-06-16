@@ -1,84 +1,57 @@
-"use client";
-
 export default function About() {
-  const benefits = [
-    {
-      title: "Conversões Mais Altas",
-      description: "Interface otimizada que reduz abandono de carrinho e aumenta suas vendas significativamente.",
-      icon: "�",
-      stats: "+47% conversão"
-    },
-    {
-      title: "Economia Real",
-      description: "Elimine taxas desnecessárias e mantenha mais lucro com nossa solução transparente.",
-      icon: "💎",
-      stats: "Zero taxas ocultas"
-    },
-    {
-      title: "Implementação Rápida",
-      description: "Configure em minutos e comece a vender imediatamente com nossa documentação simples.",
-      icon: "⚡",
-      stats: "5 min setup"
-    },
-    {
-      title: "Suporte Dedicado",
-      description: "Equipe especializada pronta para ajudar você a maximizar seus resultados.",
-      icon: "🛡️",
-      stats: "24/7 suporte"
-    }
-  ];
-
   return (
-    <section id="beneficios" className="py-24 md:py-32 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
-      </div>
-
-      <div className="container mx-auto px-6 md:px-8 relative z-10">
-        <div className="text-center mb-20">
-          <div className="inline-block mb-6">
-            <span className="px-6 py-3 bg-yellow-400/10 text-yellow-400 rounded-full text-sm font-bold heading-modern border border-yellow-400/20">
-              BENEFÍCIOS COMPROVADOS
-            </span>
+    <section id="sobre" className="py-20 md:py-32 bg-white">
+      <div className="container mx-auto px-6 md:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-700 mb-6">
+            <span className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>
+            SOBRE O DS FINANÇAS
           </div>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 heading-modern tracking-tight">
-            Benefícios <span className="gradient-text">Reais</span>
+          
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-black mb-6">
+            Transforme sua relação com o 
+            <span className="relative inline-block mx-3">
+              <span className="relative z-10 text-black">dinheiro</span>
+              <div className="absolute bottom-2 left-0 w-full h-4 bg-yellow-400/30 -skew-x-12"></div>
+            </span>
           </h2>
-          <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed text-modern">
-            Veja como o DS Checkout pode transformar seu negócio e multiplicar seus resultados.
+          
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
+            Uma plataforma completa que simplifica o controle financeiro pessoal, 
+            oferecendo ferramentas intuitivas para organizar suas finanças de forma eficiente.
           </p>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
-          {benefits.map((benefit, index) => (
-            <div
-              key={benefit.title}
-              className="group card-modern p-8 hover:scale-105 transition-all duration-500 relative overflow-hidden"
-            >
-              {/* Hover effect background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
-              <div className="flex items-start space-x-6 relative z-10">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {benefit.icon}
-                  </div>
-                  <div className="text-yellow-400 font-bold text-sm heading-modern">
-                    {benefit.stats}
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white heading-modern">{benefit.title}</h3>
-                  <p className="text-white/70 leading-relaxed text-lg text-modern">{benefit.description}</p>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-6 bg-gray-50 rounded-2xl">
+              <div className="w-12 h-12 bg-black rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                <svg className="w-6 h-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
               </div>
-
-              {/* Decorative elements */}
-              <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-yellow-400/5 rounded-full blur-xl group-hover:bg-yellow-400/10 transition-colors duration-500"></div>
+              <h3 className="text-xl font-bold text-black mb-3">Controle Simples</h3>
+              <p className="text-gray-600">Interface intuitiva que torna o controle financeiro acessível para todos.</p>
             </div>
-          ))}
+
+            <div className="p-6 bg-gray-50 rounded-2xl">
+              <div className="w-12 h-12 bg-black rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                <svg className="w-6 h-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-black mb-3">Automação Inteligente</h3>
+              <p className="text-gray-600">Automatize tarefas repetitivas e foque no que realmente importa.</p>
+            </div>
+
+            <div className="p-6 bg-gray-50 rounded-2xl">
+              <div className="w-12 h-12 bg-black rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                <svg className="w-6 h-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-black mb-3">100% Seguro</h3>
+              <p className="text-gray-600">Seus dados financeiros protegidos com a mais alta segurança.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

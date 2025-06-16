@@ -1,35 +1,21 @@
-"use client";
-
-import { Header, Footer } from '@/components/layout';
-import { Hero, About, Features, CTA } from '@/components/sections';
-import { Suspense } from 'react';
-
-// Componente de loading para seções
-function SectionLoading() {
-  return (
-    <div className="flex items-center justify-center py-20">
-      <div className="w-8 h-8 border-2 border-white border-t-yellow-400 rounded-full animate-spin"></div>
-    </div>
-  );
-}
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import Hero from '@/components/sections/Hero';
+import About from '@/components/sections/About';
+import Problems from '@/components/sections/Problems';
+import Features from '@/components/sections/Features';
+import CTA from '@/components/sections/CTA';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen">
       <Header />
-      <main className="overflow-hidden">
-        <Suspense fallback={<SectionLoading />}>
-          <Hero />
-        </Suspense>
-        <Suspense fallback={<SectionLoading />}>
-          <About />
-        </Suspense>
-        <Suspense fallback={<SectionLoading />}>
-          <Features />
-        </Suspense>
-        <Suspense fallback={<SectionLoading />}>
-          <CTA />
-        </Suspense>
+      <main>
+        <Hero />
+        <About />
+        <Problems />
+        <Features />
+        <CTA />
       </main>
       <Footer />
     </div>
