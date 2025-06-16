@@ -1,77 +1,30 @@
+import '../styles/globals.css'
 import type { Metadata } from 'next'
-import { Inter, Poppins, Montserrat } from 'next/font/google'
-import '@/styles/globals.css'
-import '@/styles/components.css'
+import { Inter, Poppins } from 'next/font/google'
 
-const inter = Inter({
+const inter = Inter({ 
   subsets: ['latin'],
-  display: 'swap',
   variable: '--font-inter',
+  display: 'swap',
+  preload: true,
 })
 
-const poppins = Poppins({
+const poppins = Poppins({ 
   subsets: ['latin'],
-  display: 'swap',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  weight: ['400', '500', '600', '700', '800', '900'],
   variable: '--font-poppins',
-})
-
-const montserrat = Montserrat({
-  subsets: ['latin'],
   display: 'swap',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-montserrat',
+  preload: true,
 })
 
 export const metadata: Metadata = {
-  title: 'DS Finanças - Transforme sua vida financeira',
-  description: 'Plataforma completa de educação e gestão financeira com IA integrada',
-  keywords: 'finanças, controle financeiro, educação financeira, IA, gestão de dinheiro',
+  title: 'DS FINANÇAS - Chatbot Financeiro Inteligente',
+  description: 'O melhor chatbot para gestão financeira pessoal e empresarial. Controle total, zero complicações.',
+  keywords: ['finanças', 'chatbot', 'gestão financeira', 'inteligência artificial'],
   authors: [{ name: 'DSYNCO' }],
-  creator: 'DSYNCO',
-  publisher: 'DSYNCO',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://dsfinancas.com'),
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: 'DS Finanças - Transforme sua vida financeira',
-    description: 'Plataforma completa de educação e gestão financeira com IA integrada',
-    url: 'https://dsfinancas.com',
-    siteName: 'DS Finanças',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'DS Finanças - Controle financeiro inteligente',
-      },
-    ],
-    locale: 'pt_BR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'DS Finanças - Transforme sua vida financeira',
-    description: 'Plataforma completa de educação e gestão financeira com IA integrada',
-    images: ['/og-image.jpg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#000000',
+  colorScheme: 'dark',
 }
 
 export default function RootLayout({
@@ -80,21 +33,19 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html 
-      lang="pt-BR" 
-      className={`${inter.variable} ${poppins.variable} ${montserrat.variable}`}
-    >
+    <html lang="pt-BR" className={`${inter.variable} ${poppins.variable} no-flicker`}>
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="manifest" href="/manifest.json" />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta name="color-scheme" content="dark" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className="bg-black text-white antialiased font-sans min-h-screen">
-        <div id="root">
+      <body className={`${inter.className} antialiased min-h-screen bg-black text-white no-flicker`} suppressHydrationWarning>
+        <main id="main-content" className="w-full min-h-screen">
           {children}
-        </div>
+        </main>
       </body>
     </html>
   )

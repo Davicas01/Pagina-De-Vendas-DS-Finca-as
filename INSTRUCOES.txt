@@ -1,0 +1,42 @@
+========================================
+     🚀 DS FINANÇAS - INSTRUÇÕES
+========================================
+
+📋 COMO USAR (SUPER SIMPLES):
+
+1. Clique duas vezes em: DS-FINANCAS.bat
+2. Escolha uma opção no menu:
+   • Opção 1: Iniciar Site
+   • Opção 2: Resolver Problemas
+
+🌐 ACESSE SEU SITE EM:
+   http://localhost:3000
+
+⚡ PRIMEIRA VEZ:
+   Execute opção 2 primeiro, depois opção 1
+
+🔧 SE DER ERRO:
+   Execute opção 2, aguarde terminar, execute opção 1
+
+========================================
+     ✅ SISTEMA UNIFICADO
+========================================
+
+Agora você tem apenas:
+• DS-FINANCAS.bat (arquivo principal)
+• README.md (documentação)
+• Pastas do projeto (src, node_modules, etc)
+
+Não precisa mais de vários arquivos .bat!
+Tudo está em um lugar só.
+
+========================================
+     🎯 DESENVOLVIMENTO
+========================================
+
+Desenvolvido por: DSYNCO
+Projeto: DS FINANÇAS - Chatbot Financeiro
+Tecnologia: Next.js + React + Tailwind
+Tema: Preto e Amarelo
+
+🚀 Pronto para usar!

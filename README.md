@@ -1,48 +1,42 @@
-# DS-FINANÇAS Landing Page
+# 🚀 DS FINANÇAS - Landing Page
 
-Landing page para o sistema DS-FINANÇAS - plataforma de educação e gestão financeira.
+**Chatbot Financeiro Inteligente - Página de Vendas**
 
-## 🚀 Execução
+## 🎯 Como Usar
 
-### Método Rápido
+### ✅ **MÉTODO SIMPLES:**
 
-Execute o arquivo `INICIAR-SITE.bat`
+1. Execute: `DS-FINANCAS.bat`
+2. Escolha opção **2** (primeira vez) ou **1** (uso normal)
+3. Acesse: http://localhost:3000
 
-### Método Manual
+## 🛠️ Tecnologias
 
-```bash
-npm install
-npm run dev
-```
+- **Next.js** 14.2.15
+- **React** 18.3.1
+- **Tailwind CSS** 3.4.16
+- **TypeScript** 5.7.2
 
-Acesse http://localhost:3000
+## 🎨 Design
 
-## 🛠 Tecnologias
+- ⚫ **Tema:** Preto e Amarelo
+- 📱 **Responsivo:** Mobile-first
+- ⚡ **Performance:** Otimizada
+- 🔥 **Animações:** Suaves
 
-- **Next.js 14** - Framework React
-- **TypeScript** - Tipagem estática
-- **Tailwind CSS** - Framework CSS
-- **Clsx + Tailwind Merge** - Utilidades CSS
+## 📋 Recursos
 
-## 📁 Estrutura
+✅ Landing page moderna  
+✅ Formulário de captura  
+✅ Design responsivo  
+✅ Cache otimizado  
+✅ Fontes Google  
+✅ SEO otimizado
 
-```
-src/
-├── app/         # Pages e layouts
-├── components/  # Componentes React
-├── lib/         # Utilitários
-└── styles/      # Estilos globais
-```
+## 🆘 Problemas?
 
-## 📋 Scripts
-
-```bash
-npm run dev    # Desenvolvimento
-npm run build  # Build de produção
-npm run start  # Servidor de produção
-npm run lint   # Linting
-```
+**Execute `DS-FINANCAS.bat` → Opção 2**
 
 ---
 
-**Desenvolvido pela equipe DSYNCO © 2025**
+_Desenvolvido por **DSYNCO** 🚀_

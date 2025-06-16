@@ -4,7 +4,11 @@
 		{
 			"label": "Dev Server",
 			"type": "shell",
-			"command": "npm run dev",
+			"command": "npm",
+			"args": [
+				"run",
+				"dev"
+			],
 			"group": "build",
 			"isBackground": true,
 			"problemMatcher": []
